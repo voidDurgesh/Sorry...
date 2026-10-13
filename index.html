@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sorry, Baby 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div>
+<div id="hearts"></div>
+
+<div class="container">
+  <div class="dots" id="dots" style="display:none"></div>
+
+  <!-- PAGE 0 : question -->
+  <section class="page active" id="p0">
+    <div class="big">🧸</div>
+    <h1>Hey Baby…</h1>
+    <p class="sub">I know I messed up 🥺<br>Are you still angry with me?</p>
+    <div class="btns">
+      <button class="ok" id="okBtn">It's okay baby 💗</button>
+      <button class="angry" id="angryBtn">I'm still angry 😤</button>
+    </div>
+  </section>
+
+  <!-- PAGE 1 : sorry message -->
+  <section class="page" id="p1">
+    <div class="big">🥹</div>
+    <h1>I'm really sorry</h1>
+    <p class="sub">I hurt you, and that's the last thing I ever want to do. You mean the whole world to me, and I hate seeing you upset because of me. I'm sorry for my mistake, from the bottom of my heart. 💞</p>
+    <button class="next" onclick="go(2)">Wait, there's more 💌</button>
+  </section>
+
+  <!-- PAGE 2 : cards -->
+  <section class="page" id="p2">
+    <div class="big">💌</div>
+    <h1>Sorry Cards</h1>
+    <p class="sub" style="margin-bottom:6px">Tap the button to get more!</p>
+    <div class="cards" id="cards1"></div>
+    <div class="count" id="count1"></div>
+    <div class="btns"><button class="add" id="add1">+ Add a sorry card 🎀</button></div>
+    <button class="next" id="next2" disabled onclick="go(3)">Next 💕</button>
+  </section>
+
+  <!-- PAGE 3 : promises -->
+  <section class="page" id="p3">
+    <div class="big">🤞</div>
+    <h1>My Promises</h1>
+    <p class="sub" style="margin-bottom:6px">Things I promise you…</p>
+    <div class="cards" id="cards2"></div>
+    <div class="count" id="count2"></div>
+    <div class="btns"><button class="add" id="add2">+ Add a promise 🌸</button></div>
+    <button class="next" id="next3" disabled onclick="go(4)">Next 💕</button>
+  </section>
+
+  <!-- PAGE 4 : letter -->
+  <section class="page" id="p4">
+    <div class="big">🫂</div>
+    <h1>A Big Hug</h1>
+    <div class="letter">
+      Life is so much brighter with you in it. Your smile fixes my worst days, and your voice is my favourite sound.<br><br>
+      I'm not perfect, but I'll keep trying to be better for you, every single day.<br><br>
+      Come here… *virtual tight hug* 🤗💗
+    </div>
+    <button class="next" onclick="go(5)">One last thing… 💖</button>
+  </section>
+
+  <!-- PAGE 5 : final -->
+  <section class="page final" id="p5">
+    <div class="big" style="font-size:90px">💖</div>
+    <h1>I love you sooo much!</h1>
+    <p class="love">You're my forever, my favourite person, my everything. 🥰</p>
+    <p class="sub" style="margin-top:14px">Thank you for forgiving me, Baby 🌷</p>
+    <div class="btns"><button class="ok" onclick="burst()">Send you more love 💘</button></div>
+  </section>
+</div>
+
+<!-- popup -->
+<div class="overlay" id="overlay">
+  <div class="modal">
+    <div class="em" id="mEm">🥺</div>
+    <h2>Sorry nowww!</h2>
+    <p id="mTxt">Please forgive me, baby. I'm so sorry. I promise I'll make it up to you! 💔</p>
+    <button class="ok" onclick="closeModal()">Okay, I'll think 🥹</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
